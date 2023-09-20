@@ -18,7 +18,7 @@ module.exports = {
   rules: {
     "@typescript-eslint/lines-between-class-members": 0,
     "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
-    "import/extensions": ["<severity>", "never"],
+    "import/extensions": ["1"],
     "import/no-anonymous-default-export": 0,
     "import/prefer-default-export": 0,
     "react/destructuring-assignment": 0,

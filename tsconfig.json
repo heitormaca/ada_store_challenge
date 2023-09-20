@@ -9,7 +9,7 @@
     "baseUrl": ".",
     "paths": {
       "public/*": ["public/*"],
-      "@/*": ["./src/*", "./dist/*", ""]
+      "@/*": ["./src/*", "./dist/*", ""],
     },
 
     /* Bundler mode */
@@ -20,11 +20,16 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+    /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": [".eslintrc.cjs", "src", "vite.config.ts"],
+  "include": [
+    ".eslintrc.cjs",
+    "src",
+    "vite.config.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
