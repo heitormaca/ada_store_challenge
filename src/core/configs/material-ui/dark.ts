@@ -96,6 +96,16 @@ export const darkTheme: ThemeOptions = {
         }
       }
     },
+    MuiFormControlLabel: {
+      styleOverrides: {
+        root: {
+          '& .MuiTypography-root': {
+            fontFamily: 'Alegreya',
+          fontSize: '1rem'
+          }
+        }
+      }
+    }
   }
 }
 

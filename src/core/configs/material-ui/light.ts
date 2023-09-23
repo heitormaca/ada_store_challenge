@@ -95,6 +95,16 @@ export const lightTheme: ThemeOptions = {
         }
       }
     },
+    MuiFormControlLabel: {
+      styleOverrides: {
+        root: {
+          '& .MuiTypography-root': {
+            fontFamily: 'Alegreya',
+          fontSize: '1rem'
+          }
+        }
+      }
+    }
   }
 }
 
