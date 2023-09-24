@@ -1,6 +1,6 @@
-import { useColorMode } from '@/core/context';
 import { PropsWithChildren } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { useColorMode } from '@/core/context';
 
 export function MaterialUiConfigProvider(props: PropsWithChildren) {
   const [colorMode] = useColorMode();
