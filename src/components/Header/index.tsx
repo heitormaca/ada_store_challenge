@@ -68,9 +68,9 @@ export function Header() {
               color:  
                 isDarkMode 
                   ? '#F29F05' 
-                  : '#2C2828'
+                  : '#2C2828',
             }}>
-            <List  >
+            <List>
               <ListItem
                 onClick={() => setOpenDrawer(false)}
               >
@@ -147,14 +147,20 @@ export function Header() {
     <AppBar 
       sx={{ 
         backgroundColor: 
-        isDarkMode 
-          ? '#2C2828' 
-          : '#F2A7BB' 
+          isDarkMode 
+            ? '#2C2828' 
+            : '#F2A7BB'
       }} 
       position="static">
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
-        <Box sx={{ flexGrow: 0.5 }}>
+        <Toolbar 
+          disableGutters 
+          sx={{ 
+            display: 'flex',
+            justifyContent: 'space-between' 
+          }}
+        >
+        <Box>
           {isMobileMode 
             ? <IconButton
                 size="large"
@@ -170,9 +176,22 @@ export function Header() {
             : <img  src={isDarkMode ? LogoDarkMode :  LogoLightMode} />}
         </Box>
 
-        <Box sx={{ flexGrow: 1 }}>
+        <Box>
           {isMobileMode 
-            ? <SearchIcon fontSize='medium' sx={{ color:  isDarkMode ?  '#F29F05' : '#2C2828' }} />
+            ? (
+              <IconButton
+                size="large"
+              >  
+                <SearchIcon 
+                  fontSize='medium' 
+                  sx={{ 
+                      color:  isDarkMode 
+                        ?  '#F29F05' 
+                        : '#2C2828' 
+                  }} 
+                />
+              </IconButton> 
+            )
             : (
               <SearchContainer>
                 <SearchIcon fontSize='small' sx={{ color: '#F2A7BB', marginRight: '5px' }} />
@@ -185,7 +204,6 @@ export function Header() {
 
         <Box 
           sx={{ 
-            flexGrow:  0.5, 
             marginLeft: '20px', 
             cursor: 'pointer', 
             display: 'flex'  
